@@ -15,5 +15,18 @@ class WebsiteController
     {
         return view('contact');
     }
-    
+    public function blog()
+    {
+        echo " blog list";
+    }
+    public function blog_details()
+    {
+        echo " blog details";
+        dd($_REQUEST);
+    }
+    public function profile_details()
+    {
+        echo "profile details";
+        dd($_REQUEST);
+    }
 }
