@@ -3,7 +3,7 @@
 $files = array_diff(scandir(realpath('commands')), array('.', '..'));
 
 foreach ($files as $file) {
-    include realpath('commands/'.$file);
+    include realpath('commands/' . $file);
 }
 
 use Command\MakeController;
@@ -14,13 +14,13 @@ use Command\MakeModel;
 $command = $argv[1];
 
 $params = [];
-if(count($argv) > 2){
+if (count($argv) > 2) {
     unset($argv[0]);
     unset($argv[1]);
     $params = array_values($argv);
 }
 
-switch($command){
+switch ($command) {
     case 'serve':
         exec('php -S localhost:8000');
         break;
@@ -29,5 +29,15 @@ switch($command){
         break;
     case 'make:controller':
         new MakeController(...$params);
+        break;
+    case 'migrate':
+        include(realpath('database/migrate.php'));
+        break;
+    case 'seed':
+        include(realpath('database/seed.php'));
+        break;
+    case 'migrate-seed':
+        include(realpath('database/migrate.php'));
+        include(realpath('database/seed.php'));
         break;
 }

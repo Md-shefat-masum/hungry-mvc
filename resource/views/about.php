@@ -28,8 +28,8 @@ resource_include('includes/header');
         foreach ($data as $item) {
         ?>
             <tr>
-                <td><?= $item->username ?></td>
-                <td><?= $item->phone_number ?></td>
+                <td><?= $item->name ?></td>
+                <td><?= $item->contact ?></td>
             </tr>
         <?php
         }

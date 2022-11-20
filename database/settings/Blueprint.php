@@ -33,13 +33,13 @@ class Blueprint
         $this->append("$column_name TEXT ");
         return $this;
     }
-    public function int($column_name)
+    public function integer($column_name)
     {
         $this->push_column();
         $this->append("$column_name INT ");
         return $this;
     }
-    public function bigint($column_name)
+    public function bigInteger($column_name)
     {
         $this->push_column();
         $this->append("$column_name BIGINT ");
@@ -56,7 +56,7 @@ class Blueprint
         $this->append(" UNSIGNED ");
         return $this;
     }
-    public function null()
+    public function nullable()
     {
         $this->append(" DEFAULT NULL ");
         return $this;

@@ -1,4 +1,6 @@
 <?php
+
+use App\Abstracts\Session;
 use Doctrine\Inflector\InflectorFactory;
 
 function view($file_name, $arr = [])
@@ -11,7 +13,7 @@ function view($file_name, $arr = [])
 
 function assets($file_name)
 {
-    $url = strtolower( explode('/',$_SERVER['SERVER_PROTOCOL'])[0] ).'://';
+    $url = strtolower(explode('/', $_SERVER['SERVER_PROTOCOL'])[0]) . '://';
     $url .= $_SERVER['HTTP_HOST'];
     return $url . "/public/$file_name";
 }
@@ -34,7 +36,12 @@ function globalvar($variable)
     return $GLOBALS[$variable];
 }
 
-function inflector(){
+function inflector()
+{
     $inflector = InflectorFactory::create()->build();
     return $inflector;
+}
+
+function session(){
+    return new Session();
 }

@@ -8,8 +8,8 @@ class ProductCategoryMigration
     {
         Schema::create('product_categories', function (Blueprint $table) {
             $table->id();
-            $table->string('title',100)->null();
-            $table->string('image',50)->null()->unique();
+            $table->string('title',100)->nullable();
+            $table->string('image',50)->nullable()->unique();
             $table->timestamp();
         });
     }

@@ -15,7 +15,6 @@ include(realpath('App/Helper.php'));
 
 // $table = new BlogMigration();
 // $table->execute();
-
 $db = mysqli_connect(
     globalvar('servername'), 
     globalvar('username'), 

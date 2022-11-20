@@ -8,10 +8,10 @@ class CommentMigration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->bigint('view')->null();
-            $table->string('email',50)->null();
-            $table->string('title',50)->null();
-            $table->text('description')->null();
+            $table->bigInteger('view')->nullable();
+            $table->string('email',50)->nullable();
+            $table->string('title',50)->nullable();
+            $table->text('description')->nullable();
             $table->status();
             $table->timestamp();
         });
