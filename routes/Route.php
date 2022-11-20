@@ -29,7 +29,7 @@ class Route
         ];
         return $this;
     }
-    
+
     public function params()
     {
         $route_last_index = count($this->route_list) - 1;
@@ -51,6 +51,14 @@ class Route
             if ($uri == $request_uri) {
                 if ($method == $request_method) {
                     $target_route = $route;
+                    if ($method == 'POST') {
+                        session()->put('old', (object) $_REQUEST);
+                    } else if ($_SERVER['HTTP_SEC_FETCH_SITE'] != 'same-origin') {
+                        session()->put('old', null);
+                        session()->put('error_message', null);
+                    }else{
+
+                    }
                 } else {
                     echo "error 500 request method not supported.";
                 }

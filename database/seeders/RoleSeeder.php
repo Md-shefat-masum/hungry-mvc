@@ -9,6 +9,8 @@ class RoleSeeder
     public function run()
     {
         $role = new Role();
+        $role->truncate();
+        
         $role->insert([
             'title' => 'super_admin',
         ]);

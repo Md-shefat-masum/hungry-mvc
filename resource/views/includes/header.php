@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,9 +27,20 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin">admin</a>
-                    </li>
+
+                    <?php
+                    if (auth()->check()) {
+                    ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin">admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="return confirm('do you want to logout?')" href="/logout">logout</a>
+                        </li>
+                    <?php
+                    }
+                    ?>
+
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

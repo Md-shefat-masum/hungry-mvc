@@ -9,10 +9,6 @@ class WebsiteController
 {
     public function home()
     {
-        session()->put('user_name','admin');
-        session()->put('is_admin',false);
-        session()->put('last_time',date('h:i:s a'));
-        dd($_SESSION, session()->all());
         return view('frontend/home');
     }
     public function about()
@@ -39,5 +35,23 @@ class WebsiteController
     {
         echo "profile details";
         dd($_REQUEST);
+    }
+
+    public function login()
+    {
+        return view('auth/login');
+    }
+
+    public function login_submit()
+    {
+        extract((array) request());
+        $check = auth()->login($email, $password);
+    
+        if($check){
+            return redirect('/');
+        }else{
+            return back();
+        }
+
     }
 }

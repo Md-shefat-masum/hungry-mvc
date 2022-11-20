@@ -1,6 +1,7 @@
 <?php
 
 use App\Abstracts\Session;
+use App\Http\Controllers\Auth\AuthController;
 use Doctrine\Inflector\InflectorFactory;
 
 function view($file_name, $arr = [])
@@ -16,6 +17,14 @@ function assets($file_name)
     $url = strtolower(explode('/', $_SERVER['SERVER_PROTOCOL'])[0]) . '://';
     $url .= $_SERVER['HTTP_HOST'];
     return $url . "/public/$file_name";
+}
+
+function session(){
+    return new Session();
+}
+
+function auth(){
+    return new AuthController();
 }
 
 function request()
@@ -42,6 +51,9 @@ function inflector()
     return $inflector;
 }
 
-function session(){
-    return new Session();
+function back(){
+    return header("Location:".$_SERVER['HTTP_REFERER']);
+}
+function redirect($path){
+    return header("Location:".$path);
 }

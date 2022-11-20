@@ -14,5 +14,6 @@ $app->post('/contact/submit','ContactController@contact_submit');
 
 $app->get('/login','WebsiteController@login');
 $app->post('/login/submit','WebsiteController@login_submit');
+$app->get('/logout','Auth\AuthController@logout');
 
 $app->start();

@@ -28,6 +28,18 @@ class Model
         // echo "<br>$table_name connection closed";
     }
 
+    public function drop()
+    {
+        $this->query = "DROP TABLE ".$this->table_name;
+        return $this->query_run($this->query);   
+    }
+
+    public function truncate()
+    {
+        $this->query = "TRUNCATE TABLE ".$this->table_name;
+        return $this->query_run($this->query);   
+    }
+
     public function query_run($query)
     {
         $result = mysqli_query($this->db, $query) ;
@@ -126,13 +138,41 @@ class Model
 
         $result = $this->query_run($query);
 
-        $data = [];
+        $data = false;
         for ($i = 0; $i < $result->num_rows; $i++) {
             $data[] = mysqli_fetch_object($result);
         }
 
         return $data;
     }
+
+    public function find()
+    {
+        $table_name = $this->table_name;
+        $select_query = $this->select_query;
+        $where_query = $this->where_query;
+        $order_query = $this->order_query;
+
+        $query = "$select_query FROM $table_name ";
+
+        if ($where_query != "") {
+            $query .= $where_query;
+        }
+
+        if ($order_query != "") {
+            $query .= $order_query;
+        }
+
+        $result = $this->query_run($query);
+
+        $data = false;
+        for ($i = 0; $i < $result->num_rows; $i++) {
+            $data = mysqli_fetch_object($result);
+        }
+
+        return $data;
+    }
+
 
     public function select($param = "*")
     {

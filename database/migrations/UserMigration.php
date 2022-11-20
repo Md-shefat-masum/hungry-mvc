@@ -11,6 +11,7 @@ class UserMigration
             $table->string('name')->nullable();
             $table->string('email',50)->nullable()->unique();
             $table->string('contact',30)->nullable();
+            $table->string('password',50)->nullable();
             $table->timestamp();
         });
     }
