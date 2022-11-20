@@ -1,5 +1,8 @@
 <?php
+
 namespace App\Http\Controllers;
+
+use App\Models\User;
 
 class WebsiteController
 {
@@ -9,7 +12,9 @@ class WebsiteController
     }
     public function about()
     {
-        return view('about');
+        $user = new User();
+        $data = $user->select('*')->get();
+        return view('about', ['data' => $data]);
     }
     public function contact()
     {
@@ -19,10 +24,11 @@ class WebsiteController
     {
         echo " blog list";
     }
-    public function blog_details()
+    public function blog_details($id, $title)
     {
         echo " blog details";
-        dd($_REQUEST);
+        // dd($_REQUEST);
+        // dd($id, $title);
     }
     public function profile_details()
     {

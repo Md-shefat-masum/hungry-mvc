@@ -66,7 +66,6 @@ class Route
             foreach ($target_route['params'] as $param) {
                 if (!isset($_REQUEST[$param])) {
                     echo "error 400 page not found, $param pameter is missing.";
-                    dd($target_route, $_REQUEST);
                     return 0;
                 }
             }
@@ -77,6 +76,6 @@ class Route
 
         $controller = "\\App\\Http\\Controllers\\$controller";
         $controller = new $controller();
-        $controller->$function();
+        $controller->$function(...array_values($_REQUEST));
     }
 }
