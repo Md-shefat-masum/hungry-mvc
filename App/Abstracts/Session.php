@@ -15,7 +15,7 @@ class Session
 
     public function get($index = 0)
     {
-        return $index ? $_SESSION[$index] : $this->all();
+        return isset($_SESSION[$index]) ? $_SESSION[$index] : '';
     }
 
     public function all()

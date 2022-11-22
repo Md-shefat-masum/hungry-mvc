@@ -74,9 +74,14 @@ class Model
     {
         $table_name = $this->table_name;
         $fields = implode(",", array_keys($data));
-        $values = "'". implode("','", array_values($data)) . "'";
+        $values = "\"". implode("\",\"", array_values($data)) . "\"";
 
         $query= "INSERT INTO $table_name ($fields) VALUES ($values)";
+
+        $query = str_replace("'","\\'",$query);
+
+        // dd($query);
+
         $this->query_run($query);
         $get_inserted_id = mysqli_insert_id($this->db);
         $data['id'] = $get_inserted_id;
