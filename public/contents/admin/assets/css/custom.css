@@ -1,0 +1,33 @@
+.table_wrapper {
+  height: 515px;
+  padding-right: 10px;
+}
+.table_wrapper table {
+  text-align: center;
+}
+.table_wrapper table thead th {
+  text-transform: capitalize;
+}
+.table_wrapper table thead th:last-child {
+  text-align: right;
+  padding-right: 45px;
+  width: 135px;
+}
+.page-content {
+  padding-bottom: 0;
+}
+.table_action {
+  text-align: right;
+}
+.table_action ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 10px;
+}
+.table_action ul li a {
+  display: grid;
+  padding: 7px;
+}
+/*# sourceMappingURL=./custom.css.map */

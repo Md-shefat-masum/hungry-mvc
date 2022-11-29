@@ -7,15 +7,12 @@ use Illuminate\Http\Request;
 
 class WebsiteControler extends Controller
 {
-    public function about()
+    public function home()
     {
-        return view('about');
+        return view('website.index');
     }
 
-    public function profile()
-    {
-        return view('profile');
-    }
+
 
     public function contact()
     {
