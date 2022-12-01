@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'WebsiteControler@home');
+Route::get('/contact', 'WebsiteControler@contact')->name('website.contact');
+Route::post('/contact-submit','WebsiteControler@contact_submit')->name('website.contact_submit');
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
