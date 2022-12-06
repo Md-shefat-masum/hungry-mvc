@@ -30,4 +30,14 @@
   display: grid;
   padding: 7px;
 }
+.pagination {
+  margin-bottom: 0;
+}
+tr td,
+tr th {
+  vertical-align: middle;
+}
+form label {
+  text-transform: capitalize;
+}
 /*# sourceMappingURL=./custom.css.map */

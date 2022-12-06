@@ -8,12 +8,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0 font-size-18">User Management</h4>
+                        <h4 class="mb-sm-0 font-size-18">Details</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">common</a></li>
-                                <li class="breadcrumb-item active">show</li>
+                                <li class="breadcrumb-item active">Details</li>
                             </ol>
                         </div>
 
@@ -27,14 +27,14 @@
                     <form action="">
                         <div class="card">
                             <div class="card-header">
-                                <h2>User Show</h2>
+                                <h2>Contact Details</h2>
                             </div>
                             <div class="card-body">
                                 <table class="table">
                                     <tr>
                                         <td style="width: 150px;">name</td>
                                         <td style="width: 3px;">:</td>
-                                        <td>{{$data->username}}</td>
+                                        <td>{{ $data->name }}</td>
                                     </tr>
                                     <tr>
                                         <td>email</td>
@@ -42,16 +42,24 @@
                                         <td>{{ $data->email }}</td>
                                     </tr>
                                     <tr>
-                                        <td>phone_number</td>
+                                        <td>subject</td>
                                         <td>:</td>
-                                        <td>{{ $data->phone_number }}</td>
+                                        <td>{{ $data->subject }}</td>
                                     </tr>
                                     <tr>
-                                        <td>image</td>
+                                        <td>message</td>
                                         <td>:</td>
-                                        <td>
-                                            <img style="height: 100px;" src="{{asset($data->photo)}}" alt="">
-                                        </td>
+                                        <td>{{ $data->message }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>created at</td>
+                                        <td>:</td>
+                                        <td>{{ $data->created_at->format('d-m-y h:i:s a') }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>updated at</td>
+                                        <td>:</td>
+                                        <td>{{ $data->updated_at->format('d-m-y h:i:s a') }}</td>
                                     </tr>
                                 </table>
                             </div>

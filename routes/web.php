@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\WebsiteControler;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -29,11 +28,20 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'Adm
     Route::get('/setting', 'DashboardController@index')->name('dashboard.setting');
     Route::get('/profile', 'DashboardController@index')->name('dashboard.profile');
 
+    //contact
+    Route::group( ['prefix'=>'contact'],function(){
+        Route::get('/all','ContactController@index')->name('dashboard.contact.all');
+        Route::get('/create','ContactController@create')->name('dashboard.contact.create');
+        Route::get('/show/{id}','ContactController@show')->name('dashboard.contact.show');
+        Route::get('/destroy/{id}','ContactController@destroy')->name('dashboard.contact.destroy');
+    });
+
     //user
     Route::group( ['prefix'=>'user'],function(){
         Route::get('/all','UserController@all')->name('dashboard.user.all');
+        Route::get('/show/{id}','UserController@show')->name('dashboard.user.show');
         Route::get('/create','UserController@create')->name('dashboard.user.create');
-        Route::get('/show','UserController@show')->name('dashboard.user.show');
+        Route::post('/store','UserController@store')->name('dashboard.user.store');
     });
 
     //common

@@ -13,8 +13,6 @@ class WebsiteControler extends Controller
         return view('website.index');
     }
 
-
-
     public function contact()
     {
         return view('website.contact');

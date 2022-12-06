@@ -23,12 +23,12 @@ class UserRoleSeeder extends Seeder
 
         UserRole::create([
             'title' => 'admin',
-            'serial' => 1,
+            'serial' => 2,
         ]);
 
         UserRole::create([
             'title' => 'user',
-            'serial' => 1,
+            'serial' => 3,
         ]);
     }
 }
