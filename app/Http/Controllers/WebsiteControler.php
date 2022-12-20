@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Contact;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class WebsiteControler extends Controller
 {
@@ -22,7 +23,7 @@ class WebsiteControler extends Controller
     {
         // dd(request()->all());
 
-        $this->validate($request,[
+        $validator = Validator::make($request->all(), [
             'name'=>['required','min:5','string','alpha'],
             'email'=>['required','min:9','email'],
             'message'=>['required','min:30'],
@@ -31,6 +32,20 @@ class WebsiteControler extends Controller
             'name.required' => 'please give your name',
             'name.min:5' => 'your name should be at least 5 character',
         ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        }
+
+        // $this->validate($request,[
+        //     'name'=>['required','min:5','string','alpha'],
+        //     'email'=>['required','min:9','email'],
+        //     'message'=>['required','min:30'],
+        //     'subject'=>['required','min:3'],
+        // ],[
+        //     'name.required' => 'please give your name',
+        //     'name.min:5' => 'your name should be at least 5 character',
+        // ]);
 
         $contact = new Contact();
         $contact->name = request()->name;
@@ -49,6 +64,9 @@ class WebsiteControler extends Controller
         //     'created_at' => Carbon::now()->toDateTimeString(),
         // ]);
 
-        return redirect()->back()->with('success', 'contact message sent.');
+        if(str_contains($_SERVER['HTTP_ACCEPT'], 'text/html')){
+            return redirect()->back()->with('success', 'contact message sent.');
+        }
+        return response()->json('contact message sent', 200);
     }
 }

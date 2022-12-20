@@ -69,7 +69,7 @@
                             })
                         </script>
                     @endif
-                    <form action="{{ route('website.contact_submit') }}" method="POST" class="contact-form">
+                    <form onsubmit="submit_form(event)" action="{{ route('website.contact_submit') }}" method="POST" class="contact-form">
                         @csrf
 
                         <fieldset>
@@ -976,6 +976,63 @@
         </div>
     </div>
     <!-- Mt Map Holder of the Page end -->
+
+    <style>
+        .pb-2{
+            padding-bottom: 20px;
+        }
+    </style>
+    <script>
+        function submit_form(event){
+            event.preventDefault();
+            let formData = new FormData(event.target);
+
+            $('.input_alert').remove();
+
+            fetch(`{{ route('website.contact_submit') }}`,{
+                method: 'POST',
+                body: formData,
+            })
+            .then(async res=>{
+                let status = res.status;
+                data = await res.json();
+                return {
+                    status,
+                    data,
+                }
+            })
+            .then(res=>{
+
+                if(res.status == 200){
+                    Swal.fire({
+                        title: 'Thanks!',
+                        text: res.data,
+                        icon: 'success',
+                        confirmButtonText: 'close'
+                    });
+                    event.target.reset();
+                }
+
+                if(res.status == 422){
+                    let data = res.data;
+                    console.log(res);
+                    for (const key in data) {
+                        if (Object.hasOwnProperty.call(data, key)) {
+                            const errors = data[key];
+                            errors.forEach(error_msg => {
+                                console.log(key, error_msg);
+                                $(`<div class="input_alert pb-2 text-danger">${error_msg}</div>`)
+                                    .insertAfter($(`input[name="${key}"`));
+
+                                $(`<div class="input_alert pb-2 text-danger">${error_msg}</div>`)
+                                    .insertAfter($(`textarea[name="${key}"`));
+                            });
+                        }
+                    }
+                }
+            })
+        }
+    </script>
 </main>
 
 @endsection
