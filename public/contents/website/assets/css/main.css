@@ -125,7 +125,7 @@
 
 /* // justify nav
 %justify {
- text-align: justify; 
+ text-align: justify;
  font-size: 1px;
  line-height: 0px;
  > * {
@@ -135,7 +135,7 @@
   font-size: $font-size-base;
   line-height: $line-height-base;
  }
- &:after { 
+ &:after {
   content: '';
   width: 100%;
   display: inline-block;
@@ -1862,7 +1862,7 @@ a:hover {
   overflow: hidden;
   list-style: none;
   text-transform: lowercase;
-  font: 300 14px/20px "Source Sans Pro", sans-serif;
+  font: 400 14px/20px "Source Sans Pro", sans-serif;
 }
 
 #nav .mt-dropmenu ul li {
@@ -1932,7 +1932,7 @@ a:hover {
   padding: 28px 0 0;
   visibility: hidden;
   position: absolute;
-  font: 300 12px/35px "Source Sans Pro", sans-serif;
+  font: 400 12px/35px "Source Sans Pro", sans-serif;
 }
 
 #nav .s-drop ul {
@@ -2129,7 +2129,7 @@ a:hover {
   color: #7d7d7d;
   overflow: hidden;
   padding: 43px 32px 37px 34px;
-  font: 300 14px/20px "Source Sans Pro", sans-serif;
+  font: 400 14px/20px "Source Sans Pro", sans-serif;
 }
 
 .mt-side-widget.borderbottom {
@@ -2255,7 +2255,7 @@ a:hover {
   padding: 9px 22px;
   background: #f0f0f0;
   border-radius: 30px;
-  font: 300 14px/20px "Source Sans Pro", sans-serif;
+  font: 400 14px/20px "Source Sans Pro", sans-serif;
 }
 
 .mt-side-widget .fa-search {
@@ -2556,7 +2556,7 @@ a:hover {
   color: #9d9d9d;
   background: none;
   padding: 15px 73px 15px 23px;
-  font: 300 25px/30px "Source Sans Pro", sans-serif;
+  font: 400 25px/30px "Source Sans Pro", sans-serif;
 }
 
 .mt-search-popup input ::-webkit-input-placeholder {
@@ -2627,7 +2627,7 @@ a:hover {
   border-radius: 18px;
   vertical-align: top;
   display: inline-block;
-  font: 300 14px/20px "Source Sans Pro", sans-serif;
+  font: 400 14px/20px "Source Sans Pro", sans-serif;
 }
 
 .btn-type1:hover {
@@ -2663,7 +2663,7 @@ a:hover {
   display: inline-block;
   border: 1px solid #000;
   text-transform: uppercase;
-  font: 300 14px/20px "Source Sans Pro", sans-serif;
+  font: 400 14px/20px "Source Sans Pro", sans-serif;
 }
 
 .btn-type3:focus, .btn-type3:hover {
@@ -3343,7 +3343,7 @@ a:hover {
   box-shadow: none;
   color: #8c8c8c;
   outline: none;
-  font-weight: 200;
+  font-weight: 400;
   padding: 7px 10px 7px 22px;
   font: 700 11px/16px "Montserrat", sans-serif;
 }
@@ -3873,7 +3873,7 @@ a:hover {
 .mt-mainslider2 p {
   margin: 0;
   color: #818182;
-  font: italic 300 16px/20px "Source Sans Pro", sans-serif;
+  font: italic 400 16px/20px "Source Sans Pro", sans-serif;
 }
 
 .mt-mainslider2 .slick-dots {
@@ -4286,7 +4286,7 @@ a:hover {
 .slider-1 .slider h2 {
   margin: 0;
   color: #fff;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 51px;
   line-height: 51px;
 }
@@ -4424,7 +4424,7 @@ a:hover {
 .slider-3 h1 {
   color: #fff;
   margin: 0 0 25px;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 37px;
   text-transform: uppercase;
   font-size: 69px;
@@ -4620,7 +4620,7 @@ a:hover {
 }
 
 .slider-7 .slider .heading.add {
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: -2px;
   margin: 0 0 6px -5px;
 }
@@ -4698,7 +4698,7 @@ a:hover {
 .banner-frame h2 {
   margin: 0 0 3px;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 4.6px;
   font-size: 24px;
   line-height: 28px;
@@ -5014,7 +5014,7 @@ a:hover {
 
 .banner-5 .texts h3 {
   margin: 0 0 8px;
-  font: 300 55px/60px "Source Sans Pro", sans-serif;
+  font: 400 55px/60px "Source Sans Pro", sans-serif;
 }
 
 .banner-5 .texts h3 strong {
@@ -6366,7 +6366,7 @@ a:hover {
   color: #a8a8a8;
   font-size: 14px;
   line-height: 21px;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 0 49px;
 }
 
@@ -7217,7 +7217,7 @@ a:hover {
 .mt-product-detial h2 {
   font-size: 44px;
   line-height: 46px;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 5px;
   word-spacing: -4px;
   margin: 0 0 15px;
@@ -7540,7 +7540,7 @@ a:hover {
 .mt-detail-sec .bill-detail .check-box {
   font-size: 16px;
   line-height: 18px;
-  font-weight: 200;
+  font-weight: 400;
   color: #868686;
 }
 
@@ -7715,7 +7715,7 @@ a:hover {
 .mt-detail-sec .panel-group .panel-body {
   font-size: 12px;
   line-height: 16px;
-  font-weight: 200;
+  font-weight: 400;
   overflow: hidden;
   color: #868686;
 }
@@ -7920,7 +7920,7 @@ a:hover {
   color: #aaaaaa;
   overflow: hidden;
   padding: 74px 0 85px;
-  font: 300 16px/21px "Source Sans Pro", sans-serif;
+  font: 400 16px/21px "Source Sans Pro", sans-serif;
 }
 
 .product-detail-tab .mt-tabs {
@@ -7966,7 +7966,7 @@ a:hover {
   overflow: hidden;
   padding: 0 0 26px;
   border-bottom: 1px solid #f0f0f0;
-  font: 300 16px/21px "Source Sans Pro", sans-serif;
+  font: 400 16px/21px "Source Sans Pro", sans-serif;
 }
 
 .product-comment .mt-hold {
@@ -8005,7 +8005,7 @@ a:hover {
 .product-comment time {
   display: inline-block;
   vertical-align: middle;
-  font: italic 300 14px/20px "Source Sans Pro", sans-serif;
+  font: italic 400 14px/20px "Source Sans Pro", sans-serif;
 }
 
 .product-comment p {
@@ -8045,7 +8045,7 @@ a:hover {
   width: 93.3%;
   outline: none;
   color: #000;
-  font-weight: 200;
+  font-weight: 400;
   -webkit-box-shadow: none;
   box-shadow: none;
   background: none;
@@ -8225,7 +8225,7 @@ a:hover {
 .mt-shoplist-header .mt-textbox {
   color: #a5a5a5;
   padding: 2px 0 0;
-  font-weight: 300;
+  font-weight: 400;
   overflow: hidden;
 }
 
@@ -9210,7 +9210,7 @@ a:hover {
 .mt-blog-detail .header .breadcrumbs {
   font-size: 14px;
   line-height: 16px;
-  font-weight: 200;
+  font-weight: 400;
   overflow: hidden;
   float: left;
   color: #000;
@@ -9270,7 +9270,7 @@ a:hover {
   font-size: 14px;
   line-height: 16px;
   color: #000;
-  font-weight: 200;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -9369,7 +9369,7 @@ a:hover {
   overflow: hidden;
   font-size: 14px;
   line-height: 27px;
-  font-weight: 200;
+  font-weight: 400;
   margin: 0 0 105px;
   color: #494949;
 }
@@ -9568,7 +9568,7 @@ a:hover {
   font-size: 14px;
   line-height: 16px;
   font-style: italic;
-  font-weight: 200;
+  font-weight: 400;
   margin: 0 0 32px;
   overflow: hidden;
   padding: 0 0 0 2px;
@@ -9766,7 +9766,7 @@ a:hover {
 
 .btn-holder .pagination.pagelink {
   margin: 0 auto;
-  width: 300px;
+  width: 400px;
   padding-top: 91px;
 }
 
@@ -9834,7 +9834,7 @@ a:hover {
 .widget.category-widget .widget-nav {
   font-size: 18px;
   line-height: 20px;
-  font-weight: 200;
+  font-weight: 400;
   margin: 0;
   overflow: hidden;
   padding: 0 4px 0 0;
@@ -9860,7 +9860,7 @@ a:hover {
 .widget.popular-widget {
   font-size: 14px;
   line-height: 17px;
-  font-weight: 200;
+  font-weight: 400;
   color: #494949;
 }
 
@@ -9904,7 +9904,7 @@ a:hover {
 .widget.tag-widget {
   font-size: 16px;
   line-height: 18px;
-  font-weight: 200;
+  font-weight: 400;
   color: #494949;
 }
 
@@ -10168,7 +10168,7 @@ a:hover {
 .mt-comments-section ul .txt .mt-time {
   font-size: 11px;
   line-height: 12px;
-  font-weight: 200;
+  font-weight: 400;
   font-style: italic;
   display: block;
   margin: 0 0 19px;
@@ -10352,7 +10352,7 @@ a:hover {
   text-align: center;
   font-size: 14px;
   line-height: 16px;
-  font-weight: 200;
+  font-weight: 400;
   background: #f4f4f4;
   color: #494949;
 }
@@ -10613,7 +10613,7 @@ a:hover {
 .mt-error-sec .txt {
   font-size: 24px;
   line-height: 26px;
-  font-weight: 300;
+  font-weight: 400;
   font-family: "Source Sans Pro", "Arial", "Helvetica", sans-serif;
   overflow: hidden;
   margin: 0 0 75px;
@@ -10967,7 +10967,7 @@ a:hover {
 .mt-map-descrp {
   font-size: 16px;
   line-height: 23px;
-  font-weight: 300;
+  font-weight: 400;
   padding: 53px 0;
   color: #383838;
 }
@@ -10989,7 +10989,7 @@ a:hover {
 -------------------------------------------------------------------*/
 .mt-contact-detail {
   padding: 75px 0 65px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   position: relative;
@@ -11031,7 +11031,7 @@ a:hover {
 .mt-contact-detail .txt-wrap {
   font-size: 16px;
   line-height: 23px;
-  font-weight: 300;
+  font-weight: 400;
   overflow: hidden;
   margin: 0 0 50px;
   color: #383838;
@@ -11052,7 +11052,7 @@ a:hover {
 .mt-contact-detail .contact-txt {
   font-size: 14px;
   line-height: 16px;
-  font-weight: 200;
+  font-weight: 400;
   overflow: hidden;
 }
 
@@ -11096,7 +11096,7 @@ a:hover {
   margin: 0 0 8px;
   font-size: 14px;
   line-height: 16px;
-  font-weight: 200;
+  font-weight: 400;
   padding: 10px 33px;
   border-color: #383838;
   color: #000;
@@ -11138,7 +11138,7 @@ a:hover {
 .mt-form-sec .header {
   font-size: 14px;
   line-height: 23px;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 0 36px;
   color: #383838;
 }
@@ -11169,7 +11169,7 @@ a:hover {
   margin: 0 0 8px;
   font-size: 14px;
   line-height: 16px;
-  font-weight: 200;
+  font-weight: 400;
   padding: 10px 33px;
   border-color: #383838;
   color: #000;
@@ -11255,7 +11255,7 @@ a:hover {
 .mt-contact-banner .breadcrumbs {
   font-size: 14px;
   line-height: 16px;
-  font-weight: 200;
+  font-weight: 400;
   overflow: hidden;
   color: #383838;
 }
@@ -11305,7 +11305,7 @@ a:hover {
   overflow: hidden;
   font-size: 18px;
   line-height: 31px;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 0 22px;
   color: #494949;
 }
@@ -12224,7 +12224,7 @@ a:hover {
 
 .nice-form label {
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .nice-form .fake-input {
@@ -12279,7 +12279,7 @@ a:hover {
 
 .nice-form [type="radio"]:checked ~ .fake-label,
 .nice-form [type="checkbox"]:checked ~ .fake-label {
-  font-weight: 300;
+  font-weight: 400;
   color: #494949;
   font-size: 13px;
   line-height: 15px;
@@ -12310,7 +12310,7 @@ a:hover {
 .count-style1 {
   color: #fff;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
   text-align: right;
   text-shadow: 0 0 0 #000;

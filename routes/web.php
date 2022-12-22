@@ -28,7 +28,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //admin
 Route::group( ['prefix'=>'admin','middleware'=>['auth'] ,'namespace'=>'Admin' ],function(){
-    Route::get('/dashboard', 'DashboardControler@index')->name('dashboard_name');
+    Route::get('/dashboard', 'DashboardControler@index')->name('dashboard.home');
 
 
 
@@ -45,6 +45,14 @@ Route::group( ['prefix'=>'user' ],function(){
     Route::get('/show','UserController@show')->name('dashboard.user.show');
     Route::get('/create','UserController@create')->name('dashboard.user.create');
 });
+
+//contact
+Route::group( ['prefix'=>'contact' ],function(){
+    Route::get('/index','ContactController@index')->name('dashboard.contact.index');
+    Route::get('/show','ContactController@show')->name('dashboard.contact.show');
+    Route::get('/create','ContactController@create')->name('dashboard.contact.create');
+});
+
 
 
 });
